@@ -1,0 +1,483 @@
+/* Reset some default styles and add basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar appears above other elements */
+}
+
+#nav-link{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
+
+#nav-link:hover{
+    color: #007BFF;
+}
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px; /* Adjust spacing between menu and toggle button */
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsive styles for menu display */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        z-index: 1000;
+    }
+
+    .menu.active a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* hero section  */
+
+
+.hero {
+    background-image: url('images/heroImg.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: solid 1px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007BFF;
+}
+
+/* features  */
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #373737;
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #515151;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.feature-item:hover{
+    box-shadow: 0px 0px 20px 0px #007BFF;
+}
+.feature-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.feature-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f7f7f7;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #c5c5c5;
+}
+
+@media (max-width: 768px) {
+    .feature-item {
+        max-width: 100%;
+    }
+}
+
+/* footer section  */
+.footer {
+    background-color: #8f8f8f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+/* login page css  */
+
+.container {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 70px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #034d9c;
+}
+
+#resetPasswordForm {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+#forgotPasswordLink {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#forgotPasswordLink:hover {
+    text-decoration: underline;
+}
+
+/* boooks */
+.container-user, .container-books {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #01366d;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/* user details */
+#userDetails {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px;
+    /* text-align: center; */
+}
+
+#userDetails p {
+    margin: 10px 0;
+}
+
+#userDetails strong {
+    font-weight: bold;
+}
+
+
+#hello {
+    text-align: center;
+    margin-top: 75px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* edit button  */
+#edit-button {
+    background-color: #04aa44;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    /* Additional styles if needed */
+}
+
+#edit-button:hover{
+    background-color: #04cd51;
+}
+
+#delete-button{
+    background-color: #aa0404;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#delete-button:hover{
+    background-color: #eb0202;
+}
+#book-item{
+    font-weight: bold;
+    font-size: larger;
+}
+
+#message{
+    background-color: rgba(0, 128, 0, 0.55);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: 0 15% 0 15%;
+    border-radius: 5px;
+    display: none;
+}
+#return-message{
+    background-color: rgba(0, 128, 0, 0.55);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: 0 15% 0 15%;
+    border-radius: 5px;
+    display: none;
+}
+/* table to display list of books available */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  tr:hover{
+    background-color: #dddcdc;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  tr:nth-child(even):hover{background-color: #dddcdc}
+
+  #borrow-btn{
+    background-color: #019bb7;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  #borrow-btn:hover{
+    background-color: #03c7ea;
+  }
+
+  /* displaying and hiding list on click */
+  #booklist-display{
+    display: none;
+  }
+  #borrow-display{
+    display: none;
+  }
+  #return-display{
+    display: none;
+  }
+  .btn-sec{
+    background-color: rgba(232, 232, 232, 0.607);
+    margin: 15px 10% 0 10%;
+  }
+  #filter-btn{
+    background-color: transparent;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 3px solid red;
+  }
+  #filter-btn:hover{
+    border-bottom: 2px solid rgb(0, 132, 255);
+    transition: 0.5s;
+  }

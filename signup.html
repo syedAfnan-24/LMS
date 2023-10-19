@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a id="nav-link" href="index.html">Library</a></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="menu">
+            <a id="nav-link" href="index.html">Home</a>
+            <a id="nav-link" href="login.html">Login</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Signup Form</h2>
+        <form id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required  autocomplete="off"><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" required  autocomplete="off"><br>
+
+            <label for="usn">University Number (USN):</label>
+            <input type="text" id="usn" required  autocomplete="off"><br>
+
+            <label for="semester">Semester:</label>
+            <input type="text" id="semester" required  autocomplete="off"><br>
+
+            <button type="submit">Signup</button>
+        </form>
+		<p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <!-- script for ui -->
+    <script src="stylesheet/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo"><a id="nav-link" href="index.html">Library</a></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="menu">
+            <a id="nav-link" href="index.html">Home</a>
+            <a id="nav-link" href="signup.html">SignUp</a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required autocomplete="off"><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <p>Forgot Password? <a href="" id="forgotPasswordLink">reset now</a></p>
+    <div id="resetPasswordForm" style="display: none;">
+        <h2>Reset Password</h2>
+        <form id="resetForm">
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" required><br>
+
+            <button type="submit">Reset Password</button>
+        </form>
+    </div>
+    <p>New here? <a id="forgotPasswordLink" href="signup.html">Register Now</a></p>
+    
+    <script src="scripts/login.js"></script>
+    <!-- script for ui -->
+    <script src="stylesheet/script.js"></script>
+</body>
+</html>

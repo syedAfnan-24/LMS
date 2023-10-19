@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <title>Admin Signup</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><a id="nav-link" href="index.html">Library</a></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="menu">
+            <a id="nav-link" href="index.html">Home</a>
+            <a id="nav-link" href="adminLogin.html">Admin Login</a>
+        </div>
+    </nav>
+    <div class="container">
+        <form id="adminSignup">
+            <label for="aname">Admin Name</label>
+            <input type="text" id="aname" placeholder="Enter Name"  autocomplete="off" required>
+            <label for="apass">Password</label>
+            <input type="password" id="apass" placeholder="Enter Password" required>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+    
+    <p>registered already~? <a href="adminLogin.html">login now</a></p>
+    <script src="scripts/adminSignup.js"></script>
+    <!-- nav bar script -->
+    <script src="stylesheet/script.js"></script>   
+</body>
+
+</html>

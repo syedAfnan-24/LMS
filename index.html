@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <!-- scroll animations  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Library</title>
+</head>
+<body>
+    <!-- navigation bar  -->
+    <nav class="navbar">
+        <div class="logo">Library</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="menu">
+            <a id="nav-link" href="login.html">Login</a>
+            <a id="nav-link" href="signup.html">SignUp</a>
+        </div>
+    </nav>
+    
+    <!-- hero section  -->
+    <header class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="5000">
+            <h1 style="color: white;">Library Management System</h1>
+            <p style="color: white;">Find the books you need</p>
+            <a href="#tab" class="btn">About Us</a>
+        </div>
+    </header>
+
+    <!-- features section -->
+    <div class="features-container" id="tab">
+        <div class="feature-item" data-aos="fade-up" data-aos-duration="5000">
+            <div class="feature-icon">&#128218;</div>
+            <div class="feature-title">Vast Collection of Books</div>
+            <div class="feature-description">Explore our extensive collection of books, ranging from classics to contemporary bestsellers.</div>
+        </div>
+        
+        <div class="feature-item" data-aos="fade-up" data-aos-duration="5000">
+            <div class="feature-icon">&#128214;</div>
+            <div class="feature-title">Digital Magazines</div>
+            <div class="feature-description">Enjoy popular magazines in digital format, covering various topics and interests.</div>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-duration="5000">
+            <div class="feature-icon">&#127912;</div>
+            <div class="feature-title">Events and Workshops</div>
+            <div class="feature-description">Participate in book readings, author signings, and educational workshops held at the library.</div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <p style="color: white;">&copy; 2023 Library. All rights reserved.</p>
+        <p style="color: white; font-size: 10px;">are you the admin? <a style="text-decoration: none;color: #054d9b;" href="adminLogin.html">Login here</a></p>
+    </div>
+    <!-- nav bar script -->
+    <script src="stylesheet/script.js"></script>    
+    <!-- scroll animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

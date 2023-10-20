@@ -57,13 +57,14 @@
     </div>
 
 
-    <script src="scripts/adminSettings.js"></script>
+    <script src="dist/adminSettings.js"></script>
     <script>
         document.getElementById("hello").innerHTML = "Hello! " + sessionStorage.getItem("admin")
         const logoutBtn = document.getElementById("logoutBtn");
         logoutBtn.addEventListener("click", function () {
             // Remove user data from local storage
             sessionStorage.removeItem("admin");
+            sessionStorage.clear()
 
             // Redirect to the login page after logout
             window.location.href = "index.html";

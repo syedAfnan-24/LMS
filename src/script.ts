@@ -1,3 +1,5 @@
+//UI Script for mobile toggle button
+
 const mobileMenuButton = document.getElementById("mobile-menu")!;
 const menu = document.querySelector(".menu")!;
 

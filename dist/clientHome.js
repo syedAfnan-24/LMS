@@ -22,4 +22,62 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-//gotta add more stuff here, listing books, borrow and return features...I'll do it after setting up admin profile
+function displayLocalStorageList() {
+    // Retrieve the list from local storage
+    const storedListJSON = localStorage.getItem("books");
+    // Check if the list exists in local storage
+    if (storedListJSON) {
+        // Parse the stored list from JSON to TypeScript array of objects
+        const list = JSON.parse(storedListJSON);
+        // Get the display element from the HTML
+        const displayElement = document.getElementById("display");
+        // Clear previous content
+        if (displayElement) {
+            displayElement.innerHTML = '';
+            // Create a table element
+            const table = document.createElement('table');
+            // Create a header row for the table
+            const headerRow = table.insertRow();
+            const headers = ['Title', 'Author', 'Year', 'Actions'];
+            // Iterate through the headers and create <th> elements
+            headers.forEach(headerText => {
+                const header = document.createElement('th');
+                header.textContent = headerText;
+                headerRow.appendChild(header);
+            });
+            // Iterate through the list and display each item in the table
+            list.forEach(item => {
+                // Create a new row for each item
+                const row = table.insertRow();
+                // Create cells for each property (title, author, year)
+                const titleCell = row.insertCell();
+                titleCell.textContent = item.title;
+                const authorCell = row.insertCell();
+                authorCell.textContent = item.author;
+                const yearCell = row.insertCell();
+                yearCell.textContent = item.year.toString();
+                // Create a cell for the Borrow button
+                const borrowCell = row.insertCell();
+                const borrowButton = document.createElement("button");
+                borrowButton.textContent = "Borrow";
+                borrowButton.id = "borrow-btn";
+                borrowButton.addEventListener("click", function () {
+                    // borrowBook(item.title);
+                    borrowButton.style.backgroundColor = "rgba(11, 118, 11, 0.546)";
+                    borrowButton.textContent = "Borrowed";
+                    borrowButton.disabled = true;
+                });
+                borrowCell.appendChild(borrowButton);
+            });
+            // Append the table to the display element
+            if (displayElement) {
+                displayElement.appendChild(table);
+            }
+        }
+    }
+    else {
+        console.log('No list found in Local Storage.');
+    }
+}
+// to render on screen as soon as its opened
+displayLocalStorageList();
